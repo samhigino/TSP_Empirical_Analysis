@@ -1,0 +1,51 @@
+{
+  "instance_name": "bays29",
+  "dimension": 29,
+  "edge_weight_type": "EXPLICIT",
+  "optimal_cost": 2020,
+  "branch_and_bound": {
+    "warm_start": "trivial",
+    "total_time_sec": 3551.993054099963,
+    "heuristic_time_sec": 9.809993207454681e-05,
+    "best_cost": 5752,
+    "is_optimal": false,
+    "timed_out": true,
+    "nodes_expanded": 985087,
+    "nodes_pruned": 573285,
+    "peak_memory_bytes": 50172
+  },
+  "twice_around_the_tree": {
+    "total_time_sec": 0.0020666999043896794,
+    "approx_factor": 1.1995049504950495,
+    "subroutine_profiling": {
+      "mst_construction": {
+        "time_sec": 0.0018633999861776829,
+        "peak_memory_bytes": 32004
+      },
+      "preorder_shortcutting": {
+        "time_sec": 0.0001583000412210822,
+        "peak_memory_bytes": 4944
+      },
+      "total_peak_memory_bytes": 32004
+    }
+  },
+  "christofides": {
+    "total_time_sec": 0.029883199953474104,
+    "approx_factor": 1.050990099009901,
+    "subroutine_profiling": {
+      "mst_construction": {
+        "time_sec": 0.0014755999436601996,
+        "peak_memory_bytes": 31924
+      },
+      "minimum_weight_perfect_matching": {
+        "time_sec": 0.0239235000917688,
+        "peak_memory_bytes": 106030
+      },
+      "eulerian_circuit_and_shortcutting": {
+        "time_sec": 0.004372299998067319,
+        "peak_memory_bytes": 54296
+      },
+      "total_peak_memory_bytes": 106030
+    }
+  }
+}
