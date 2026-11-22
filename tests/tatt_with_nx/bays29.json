@@ -1,0 +1,21 @@
+{
+  "instance_name": "bays29",
+  "dimension": 29,
+  "edge_weight_type": "EXPLICIT",
+  "optimal_cost": 2020,
+  "twice-around-the-tree": {
+    "total_time_sec": 0.0011275000870227814,
+    "approx_factor": 1.1995049504950495,
+    "subroutine_profiling": {
+      "mst_construction": {
+        "time_sec": 0.0010099000064656138,
+        "peak_memory_bytes": 32052
+      },
+      "preorder_shortcutting": {
+        "time_sec": 8.939998224377632e-05,
+        "peak_memory_bytes": 4880
+      },
+      "total_peak_memory_bytes": 32052
+    }
+  }
+}

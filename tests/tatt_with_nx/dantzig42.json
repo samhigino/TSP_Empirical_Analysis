@@ -1,0 +1,21 @@
+{
+  "instance_name": "dantzig42",
+  "dimension": 42,
+  "edge_weight_type": "EXPLICIT",
+  "optimal_cost": 699,
+  "twice-around-the-tree": {
+    "total_time_sec": 0.0025586000410839915,
+    "approx_factor": 1.2789699570815452,
+    "subroutine_profiling": {
+      "mst_construction": {
+        "time_sec": 0.00240899994969368,
+        "peak_memory_bytes": 78796
+      },
+      "preorder_shortcutting": {
+        "time_sec": 0.00011089991312474012,
+        "peak_memory_bytes": 5240
+      },
+      "total_peak_memory_bytes": 78796
+    }
+  }
+}

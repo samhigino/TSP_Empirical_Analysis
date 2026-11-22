@@ -1,0 +1,2 @@
+Neste teste, rodamos o main.py em raw_ai_scripts/, sem nenhum tipo de refatoração.
+O warm-start utilizado foi o trivial.
