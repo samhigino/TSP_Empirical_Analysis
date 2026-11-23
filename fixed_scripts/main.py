@@ -18,6 +18,7 @@ from twice_around_the_tree import twice_around_the_tree
 # ==============================================================================
 WARM_START_STRATEGY: str = "trivial"
 TIME_LIMIT_SECONDS: float = 1800.0  # 30 minutos
+SAVE_INDIVIDUAL = False     # Caso falso, o programa apenas salva o resultado de todas as instâncias juntas
 
 # Instâncias selecionadas (nome, sol_otima)
 INSTANCES: dict[str, int] = {
@@ -36,6 +37,10 @@ INSTANCES: dict[str, int] = {
     "st70": 675
 }
 
+# Relativos à quantidade de testes feitos para medidas mais precisas de tempo (aplica apenas aos aproximativos)
+VALID_TESTS = 100       # Quantidade de testes que serão validados
+DISCARDED_TESTS = 20    # Quantidade de testes que serão descartados
+
 # Tipos de testes que queremos fazer
 TEST_TYPES: list[str] = [
     "branch-and-bound",         # Testar somente o branch_and_bound
@@ -43,7 +48,7 @@ TEST_TYPES: list[str] = [
     "christofides",             # Testar somente o Chirstofides
     "all"                       # Testar todos os algoritmos
 ]
-TEST: str = TEST_TYPES[1]
+TEST: str = TEST_TYPES[1]       # Mudar o número aqui pra mudar o teste
 
 
 # Resolve uma única instância do TSP pelos três métodos e retorna um dicionário com todas as métricas.
@@ -59,11 +64,97 @@ def run_instance_benchmark(
 
     # 1. Algoritmo Aproximado: Twice-Around-the-Tree
     if test_type == "all" or test_type == "twice-around-the-tree":
-        tat_time, tat_factor, tat_prof = twice_around_the_tree(graph, optimal_cost, time_limit, debug=True)
+        if VALID_TESTS == 1:
+            tat_time, tat_factor, tat_prof = twice_around_the_tree(graph, optimal_cost, time_limit, debug=True)
+
+        elif VALID_TESTS > 1:
+            tat_time = 0.0
+            peak_mem = 0
+            time_mst = 0.0
+            time_dfs = 0.0
+            mem_mst = 0
+            mem_dfs = 0
+
+            for i in range(VALID_TESTS + DISCARDED_TESTS):
+                t, tat_factor, p = twice_around_the_tree(graph, optimal_cost, time_limit, debug=False)
+                print(f"Test number {i+1} time: {t:.6f}")
+                if i >= DISCARDED_TESTS:
+                    tat_time += t
+                    peak_mem += p["total_peak_memory_bytes"]
+                    time_mst += p["mst_construction"]["time_sec"]
+                    time_dfs += p["preorder_shortcutting"]["time_sec"]
+                    mem_mst += p["mst_construction"]["peak_memory_bytes"]
+                    mem_dfs += p["preorder_shortcutting"]["peak_memory_bytes"]
+
+            tat_time /= float(VALID_TESTS)
+            peak_mem /= VALID_TESTS
+            time_mst /= float(VALID_TESTS)
+            time_dfs /= float(VALID_TESTS)
+            mem_mst /= VALID_TESTS
+            mem_dfs /= VALID_TESTS
+            tat_prof = {
+                "mst_construction": {
+                    "time_sec": time_mst,
+                    "peak_memory_bytes": int(mem_mst)
+                },
+                "preorder_shortcutting": {
+                    "time_sec": time_dfs,
+                    "peak_memory_bytes": int(mem_dfs)
+                },
+                "total_peak_memory_bytes": int(peak_mem)
+            }
 
     # 2. Algoritmo Aproximado: Christofides
     if test_type == "all" or test_type == "christofides":
-        chr_time, chr_factor, chr_prof = christofides(graph, optimal_cost, time_limit, verbose=True)
+        if VALID_TESTS == 1:
+            chr_time, chr_factor, chr_prof = christofides(graph, optimal_cost, time_limit, verbose=True)
+
+        elif VALID_TESTS > 1:
+            chr_time = 0.0
+            peak_mem = 0
+            time_mst = 0.0
+            time_mat = 0.0
+            time_cir = 0.0
+            mem_mst = 0
+            mem_mat = 0
+            mem_cir = 0
+
+            for i in range(VALID_TESTS + DISCARDED_TESTS):
+                t, chr_factor, p = christofides(graph, optimal_cost, time_limit, verbose=False)
+                print(f"Test number {i+1} time: {t}")
+                if i >= DISCARDED_TESTS:
+                    chr_time += t
+                    peak_mem += p["total_peak_memory_bytes"]
+                    time_mst += p["mst_construction"]["time_sec"]
+                    time_mat += p["minimum_weight_perfect_matching"]["time_sec"]
+                    time_cir += p["eulerian_circuit_and_shortcutting"]["time_sec"]
+                    mem_mst += p["mst_construction"]["peak_memory_bytes"]
+                    mem_mat += p["minimum_weight_perfect_matching"]["peak_memory_bytes"]
+                    mem_cir += p["eulerian_circuit_and_shortcutting"]["peak_memory_bytes"]
+
+            chr_time /= float(VALID_TESTS)
+            peak_mem /= VALID_TESTS
+            time_mst /= float(VALID_TESTS)
+            time_mat /= float(VALID_TESTS)
+            time_cir /= float(VALID_TESTS)
+            mem_mst /= VALID_TESTS
+            mem_mat /= VALID_TESTS
+            mem_cir /= VALID_TESTS
+            chr_prof = {
+                "mst_construction": {
+                    "time_sec": time_mst,
+                    "peak_memory_bytes": int(mem_mst)
+                },
+                "minimum_weight_perfect_matching": {
+                    "time_sec": time_mat,
+                    "peak_memory_bytes": int(mem_mat)
+                },
+                "eulerian_circuit_and_shortcutting": {
+                    "time_sec": time_cir,
+                    "peak_memory_bytes": int(mem_cir)
+                },
+                "total_peak_memory_bytes": 0
+            }
 
     # 3. Algoritmo Exato: Branch-and-Bound com warm-start selecionado
     if test_type == "all" or test_type == "branch-and-bound":
@@ -254,9 +345,10 @@ def main() -> None:
         all_results.append(result)
 
         # Persiste individualmente os dados de cada instância logo após a sua conclusão.
-        instance_file = results_dir / f"{instance_name}.json"
-        with instance_file.open("w", encoding="utf-8") as f:
-            json.dump(result, f, indent=2, ensure_ascii=False)
+        if SAVE_INDIVIDUAL:
+            instance_file = results_dir / f"{instance_name}.json"
+            with instance_file.open("w", encoding="utf-8") as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
 
     # Salva o consolidado geral das execuções.
     summary_file = results_dir / "all_instances_summary.json"

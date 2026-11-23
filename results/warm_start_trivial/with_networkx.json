@@ -5,18 +5,18 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 3323,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0027920000720769167,
+      "total_time_sec": 0.00044813399552367627,
       "approx_factor": 1.14775804995486,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0018838000250980258,
-          "peak_memory_bytes": 54417
+          "time_sec": 0.00037119099753908815,
+          "peak_memory_bytes": 12752
         },
         "preorder_shortcutting": {
-          "time_sec": 0.0008530999766662717,
-          "peak_memory_bytes": 48158
+          "time_sec": 5.947298952378333e-05,
+          "peak_memory_bytes": 2768
         },
-        "total_peak_memory_bytes": 54417
+        "total_peak_memory_bytes": 12752
       }
     }
   },
@@ -26,18 +26,18 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 6859,
     "twice-around-the-tree": {
-      "total_time_sec": 0.000700299977324903,
+      "total_time_sec": 0.0005678610026370734,
       "approx_factor": 1.1522087767896194,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0005804999964311719,
-          "peak_memory_bytes": 16560
+          "time_sec": 0.00048297600471414626,
+          "peak_memory_bytes": 14368
         },
         "preorder_shortcutting": {
-          "time_sec": 9.210000280290842e-05,
+          "time_sec": 6.586599512957036e-05,
           "peak_memory_bytes": 2840
         },
-        "total_peak_memory_bytes": 16560
+        "total_peak_memory_bytes": 14368
       }
     }
   },
@@ -47,18 +47,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2085,
     "twice-around-the-tree": {
-      "total_time_sec": 0.000529700075276196,
+      "total_time_sec": 0.000498555003432557,
       "approx_factor": 1.1280575539568345,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.00041259999852627516,
-          "peak_memory_bytes": 15632
+          "time_sec": 0.00041248099412769077,
+          "peak_memory_bytes": 14672
         },
         "preorder_shortcutting": {
-          "time_sec": 9.559991303831339e-05,
+          "time_sec": 6.746199331246316e-05,
           "peak_memory_bytes": 3048
         },
-        "total_peak_memory_bytes": 15632
+        "total_peak_memory_bytes": 14672
       }
     }
   },
@@ -68,18 +68,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2707,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0008044999558478594,
+      "total_time_sec": 0.0007331640087068081,
       "approx_factor": 1.3771702992242334,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0007091999286785722,
-          "peak_memory_bytes": 28832
+          "time_sec": 0.0006340050080325454,
+          "peak_memory_bytes": 22296
         },
         "preorder_shortcutting": {
-          "time_sec": 7.350009400397539e-05,
+          "time_sec": 7.824400789104402e-05,
           "peak_memory_bytes": 4808
         },
-        "total_peak_memory_bytes": 28832
+        "total_peak_memory_bytes": 22296
       }
     }
   },
@@ -89,18 +89,18 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 7013,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0008814999600872397,
+      "total_time_sec": 0.0010582640045322478,
       "approx_factor": 1.197918152003422,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0007492000004276633,
-          "peak_memory_bytes": 25896
+          "time_sec": 0.0009296739986166358,
+          "peak_memory_bytes": 24736
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00010430009569972754,
+          "time_sec": 0.00010118199745193124,
           "peak_memory_bytes": 4736
         },
-        "total_peak_memory_bytes": 25896
+        "total_peak_memory_bytes": 24736
       }
     }
   },
@@ -110,18 +110,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1272,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0027191999834030867,
+      "total_time_sec": 0.0006588310038205237,
       "approx_factor": 1.2633647798742138,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.00259750010445714,
-          "peak_memory_bytes": 26464
+          "time_sec": 0.0005550659995060414,
+          "peak_memory_bytes": 22440
         },
         "preorder_shortcutting": {
-          "time_sec": 9.23000043258071e-05,
+          "time_sec": 8.269599406048656e-05,
           "peak_memory_bytes": 5232
         },
-        "total_peak_memory_bytes": 26464
+        "total_peak_memory_bytes": 22440
       }
     }
   },
@@ -131,18 +131,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1610,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0014383000088855624,
+      "total_time_sec": 0.0010025430051609874,
       "approx_factor": 1.3726708074534162,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0012894999235868454,
-          "peak_memory_bytes": 40956
+          "time_sec": 0.0008901819970924407,
+          "peak_memory_bytes": 29980
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00011309992987662554,
+          "time_sec": 8.929800125770271e-05,
           "peak_memory_bytes": 5376
         },
-        "total_peak_memory_bytes": 40956
+        "total_peak_memory_bytes": 29980
       }
     }
   },
@@ -152,18 +152,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2020,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0011275000870227814,
+      "total_time_sec": 0.0011229220044333488,
       "approx_factor": 1.1995049504950495,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0010099000064656138,
-          "peak_memory_bytes": 32052
+          "time_sec": 0.0010078899993095547,
+          "peak_memory_bytes": 31900
         },
         "preorder_shortcutting": {
-          "time_sec": 8.939998224377632e-05,
+          "time_sec": 9.083000943064689e-05,
           "peak_memory_bytes": 4880
         },
-        "total_peak_memory_bytes": 32052
+        "total_peak_memory_bytes": 31900
       }
     }
   },
@@ -173,18 +173,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 699,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0025586000410839915,
+      "total_time_sec": 0.002077951997052878,
       "approx_factor": 1.2789699570815452,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.00240899994969368,
-          "peak_memory_bytes": 78796
+          "time_sec": 0.0019285160023719073,
+          "peak_memory_bytes": 47940
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00011089991312474012,
+          "time_sec": 0.00012159899575635791,
           "peak_memory_bytes": 5240
         },
-        "total_peak_memory_bytes": 78796
+        "total_peak_memory_bytes": 47940
       }
     }
   },
@@ -194,18 +194,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1273,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0019360999576747417,
+      "total_time_sec": 0.0020381900016218425,
       "approx_factor": 1.2890809112333073,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.001798400073312223,
-          "peak_memory_bytes": 48904
+          "time_sec": 0.0018944119988009334,
+          "peak_memory_bytes": 48784
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00010999990627169609,
+          "time_sec": 0.00011701201554387808,
           "peak_memory_bytes": 5232
         },
-        "total_peak_memory_bytes": 48904
+        "total_peak_memory_bytes": 48784
       }
     }
   },
@@ -215,18 +215,18 @@
     "edge_weight_type": "EUC_2D",
     "optimal_cost": 7542,
     "twice-around-the-tree": {
-      "total_time_sec": 0.005550300003960729,
+      "total_time_sec": 0.0050228839891497045,
       "approx_factor": 1.3410236011667993,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.005341899930499494,
-          "peak_memory_bytes": 126888
+          "time_sec": 0.00482328500598669,
+          "peak_memory_bytes": 100784
         },
         "preorder_shortcutting": {
-          "time_sec": 0.0001604000572115183,
+          "time_sec": 0.00016202900325879455,
           "peak_memory_bytes": 5336
         },
-        "total_peak_memory_bytes": 126888
+        "total_peak_memory_bytes": 100784
       }
     }
   },
@@ -236,18 +236,18 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 25395,
     "twice-around-the-tree": {
-      "total_time_sec": 0.010096900048665702,
+      "total_time_sec": 0.009781856995541603,
       "approx_factor": 1.1530616263043907,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.009827900095842779,
-          "peak_memory_bytes": 165316
+          "time_sec": 0.009489399993326516,
+          "peak_memory_bytes": 131076
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00018060009460896254,
-          "peak_memory_bytes": 6304
+          "time_sec": 0.0002400480059441179,
+          "peak_memory_bytes": 6080
         },
-        "total_peak_memory_bytes": 165316
+        "total_peak_memory_bytes": 131076
       }
     }
   },
@@ -257,18 +257,18 @@
     "edge_weight_type": "EUC_2D",
     "optimal_cost": 675,
     "twice-around-the-tree": {
-      "total_time_sec": 0.007094500004313886,
+      "total_time_sec": 0.00788421000353992,
       "approx_factor": 1.3022222222222222,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.006832099985331297,
-          "peak_memory_bytes": 177320
+          "time_sec": 0.007607666004914791,
+          "peak_memory_bytes": 137880
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00018719991203397512,
-          "peak_memory_bytes": 6016
+          "time_sec": 0.00021600299864076077,
+          "peak_memory_bytes": 5960
         },
-        "total_peak_memory_bytes": 177320
+        "total_peak_memory_bytes": 137880
       }
     }
   }
