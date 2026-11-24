@@ -4,15 +4,15 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 6859,
     "twice-around-the-tree": {
-        "total_time_sec": 0.0007842239103047177,
+        "total_time_sec": 0.0007274196698563173,
         "approx_factor": 1.1522087767896194,
         "subroutine_profiling": {
             "mst_construction": {
-                "time_sec": 0.000677516920841299,
+                "time_sec": 0.000636869999289047,
                 "peak_memory_bytes": 14368
             },
             "preorder_shortcutting": {
-                "time_sec": 8.293411941849627e-05,
+                "time_sec": 7.184120026067831e-05,
                 "peak_memory_bytes": 2840
             },
             "total_peak_memory_bytes": 14368

@@ -5,15 +5,15 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 3323,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0005486757500329986,
+      "total_time_sec": 0.0004871777100197505,
       "approx_factor": 1.14775804995486,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0004649473895551637,
+          "time_sec": 0.0004110469493025448,
           "peak_memory_bytes": 12752
         },
         "preorder_shortcutting": {
-          "time_sec": 6.549017023644411e-05,
+          "time_sec": 5.9719689743360506e-05,
           "peak_memory_bytes": 2768
         },
         "total_peak_memory_bytes": 12752
@@ -26,15 +26,15 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 6859,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0007842239103047177,
+      "total_time_sec": 0.0007274196698563173,
       "approx_factor": 1.1522087767896194,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.000677516920841299,
+          "time_sec": 0.000636869999289047,
           "peak_memory_bytes": 14368
         },
         "preorder_shortcutting": {
-          "time_sec": 8.293411941849627e-05,
+          "time_sec": 7.184120026067831e-05,
           "peak_memory_bytes": 2840
         },
         "total_peak_memory_bytes": 14368
@@ -47,15 +47,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2085,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0006791628499922809,
+      "total_time_sec": 0.0005355604502256028,
       "approx_factor": 1.1280575539568345,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0005790366613655351,
+          "time_sec": 0.00045496446124161595,
           "peak_memory_bytes": 14672
         },
         "preorder_shortcutting": {
-          "time_sec": 7.895795017248019e-05,
+          "time_sec": 6.280664965743198e-05,
           "peak_memory_bytes": 3048
         },
         "total_peak_memory_bytes": 14672
@@ -68,15 +68,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2707,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0012636093702167272,
+      "total_time_sec": 0.001032021450373577,
       "approx_factor": 1.3771702992242334,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0011191558692371473,
+          "time_sec": 0.0009097901887435,
           "peak_memory_bytes": 22296
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00011651488050119952,
+          "time_sec": 9.581970109138637e-05,
           "peak_memory_bytes": 4808
         },
         "total_peak_memory_bytes": 22296
@@ -89,15 +89,15 @@
     "edge_weight_type": "GEO",
     "optimal_cost": 7013,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0017426769003213848,
+      "total_time_sec": 0.001283030129125109,
       "approx_factor": 1.197918152003422,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0015592100404319353,
+          "time_sec": 0.00115334789006738,
           "peak_memory_bytes": 24736
         },
         "preorder_shortcutting": {
-          "time_sec": 0.0001467689788842108,
+          "time_sec": 0.00010410482020233757,
           "peak_memory_bytes": 4736
         },
         "total_peak_memory_bytes": 24736
@@ -110,15 +110,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1272,
     "twice-around-the-tree": {
-      "total_time_sec": 0.000996636180934729,
+      "total_time_sec": 0.0007440634006343316,
       "approx_factor": 1.2633647798742138,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0008583312906557694,
+          "time_sec": 0.0006380934501066804,
           "peak_memory_bytes": 22440
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00011316176067339257,
+          "time_sec": 8.616087026894092e-05,
           "peak_memory_bytes": 5232
         },
         "total_peak_memory_bytes": 22440
@@ -131,15 +131,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1610,
     "twice-around-the-tree": {
-      "total_time_sec": 0.001680419489275664,
+      "total_time_sec": 0.0012382561499543953,
       "approx_factor": 1.3726708074534162,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0014997343205322977,
+          "time_sec": 0.0011238523604697548,
           "peak_memory_bytes": 29980
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00012953024954185822,
+          "time_sec": 9.122853982262313e-05,
           "peak_memory_bytes": 5376
         },
         "total_peak_memory_bytes": 29980
@@ -152,15 +152,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 2020,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0015961417999642436,
+      "total_time_sec": 0.0013483898709819187,
       "approx_factor": 1.1995049504950495,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0014520108798751607,
+          "time_sec": 0.0012264991900883615,
           "peak_memory_bytes": 31900
         },
         "preorder_shortcutting": {
-          "time_sec": 0.000115701590111712,
+          "time_sec": 9.879376841126942e-05,
           "peak_memory_bytes": 4880
         },
         "total_peak_memory_bytes": 31900
@@ -173,15 +173,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 699,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0029099091902025976,
+      "total_time_sec": 0.0028104335608077234,
       "approx_factor": 1.2789699570815452,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.0027164839798933826,
+          "time_sec": 0.0026394098199671134,
           "peak_memory_bytes": 47940
         },
         "preorder_shortcutting": {
-          "time_sec": 0.0001510952803073451,
+          "time_sec": 0.00013358474054257386,
           "peak_memory_bytes": 5240
         },
         "total_peak_memory_bytes": 47940
@@ -194,15 +194,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 1273,
     "twice-around-the-tree": {
-      "total_time_sec": 0.0031181088100129275,
+      "total_time_sec": 0.002584505319973687,
       "approx_factor": 1.2890809112333073,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.002917300460248953,
+          "time_sec": 0.002420636339811608,
           "peak_memory_bytes": 48784
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00016123814100865274,
+          "time_sec": 0.00013151769060641528,
           "peak_memory_bytes": 5232
         },
         "total_peak_memory_bytes": 48784
@@ -215,15 +215,15 @@
     "edge_weight_type": "EUC_2D",
     "optimal_cost": 7542,
     "twice-around-the-tree": {
-      "total_time_sec": 0.007270741970132804,
+      "total_time_sec": 0.006788596259430051,
       "approx_factor": 1.3410236011667993,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.007025495979178231,
+          "time_sec": 0.006575794049713295,
           "peak_memory_bytes": 100784
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00019606984962592834,
+          "time_sec": 0.00017006249981932342,
           "peak_memory_bytes": 5336
         },
         "total_peak_memory_bytes": 100784
@@ -236,15 +236,15 @@
     "edge_weight_type": "EXPLICIT",
     "optimal_cost": 25395,
     "twice-around-the-tree": {
-      "total_time_sec": 0.010783225929917534,
+      "total_time_sec": 0.008542118629266042,
       "approx_factor": 1.1530616263043907,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.010500963030208367,
+          "time_sec": 0.008317253219138366,
           "peak_memory_bytes": 131076
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00022354479151545092,
+          "time_sec": 0.0001822076298412867,
           "peak_memory_bytes": 6080
         },
         "total_peak_memory_bytes": 131076
@@ -257,15 +257,15 @@
     "edge_weight_type": "EUC_2D",
     "optimal_cost": 675,
     "twice-around-the-tree": {
-      "total_time_sec": 0.009957315030333121,
+      "total_time_sec": 0.008427931679907488,
       "approx_factor": 1.3022222222222222,
       "subroutine_profiling": {
         "mst_construction": {
-          "time_sec": 0.009630304239544784,
+          "time_sec": 0.008170816939964425,
           "peak_memory_bytes": 137880
         },
         "preorder_shortcutting": {
-          "time_sec": 0.00024321250879438594,
+          "time_sec": 0.00019502889976138248,
           "peak_memory_bytes": 5960
         },
         "total_peak_memory_bytes": 137880

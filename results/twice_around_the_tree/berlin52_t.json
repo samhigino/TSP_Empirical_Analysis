@@ -4,15 +4,15 @@
     "edge_weight_type": "EUC_2D",
     "optimal_cost": 7542,
     "twice-around-the-tree": {
-        "total_time_sec": 0.007270741970132804,
+        "total_time_sec": 0.006788596259430051,
         "approx_factor": 1.3410236011667993,
         "subroutine_profiling": {
             "mst_construction": {
-                "time_sec": 0.007025495979178231,
+                "time_sec": 0.006575794049713295,
                 "peak_memory_bytes": 100784
             },
             "preorder_shortcutting": {
-                "time_sec": 0.00019606984962592834,
+                "time_sec": 0.00017006249981932342,
                 "peak_memory_bytes": 5336
             },
             "total_peak_memory_bytes": 100784
