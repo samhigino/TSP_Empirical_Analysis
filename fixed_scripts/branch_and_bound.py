@@ -7,7 +7,7 @@ from scipy.spatial import ConvexHull, QhullError
 
 from christofides import compute_christofides_tour
 from data_process import TSPGraph
-from twice_around_the_tree import compute_twice_around_tour
+from twice_around_the_tree_nonx import compute_twice_around_tour_full
 
 
 # Calcula o custo total de um ciclo hamiltoniano fechado a partir da matriz de distâncias.
@@ -17,13 +17,25 @@ def _compute_tour_cost(tour: list[int], dist_matrix: np.ndarray) -> int:
 
 
 # Heurística 1 (Trivial): gera o ciclo canônico 0 -> 1 -> ... -> N-1 -> 0 e retorna tour e custo.
-def heuristic_trivial(graph: TSPGraph) -> tuple[list[int], int]:
-    tour = list(range(graph.dimension))
+def heuristic_trivial(
+    graph: TSPGraph,
+    stats: dict | None = None
+) -> tuple[list[int], int]:
+    n = graph.dimension
+    tour = []
+
+    for node in range(n):
+        if stats is not None:
+            stats["nodes_visited"] += 1
+        tour.append(node)
+
     return tour, _compute_tour_cost(tour, graph.dist_matrix)
 
-
 # Heurística 2 (Busca Gulosa): constrói um ciclo via Vizinho Mais Próximo a partir do vértice 0.
-def heuristic_nearest_neighbor(graph: TSPGraph) -> tuple[list[int], int]:
+def heuristic_nearest_neighbor(
+    graph: TSPGraph,
+    stats: dict | None = None
+) -> tuple[list[int], int]:
     n = graph.dimension
     dist = graph.dist_matrix
     visited = [False] * n
@@ -31,13 +43,25 @@ def heuristic_nearest_neighbor(graph: TSPGraph) -> tuple[list[int], int]:
     visited[0] = True
     curr = 0
 
+    if stats is not None:
+        stats["nodes_visited"] += 1  # nodo inicial
+
     for _ in range(n - 1):
         best_next = -1
         best_dist = float("inf")
+
         for candidate in range(n):
-            if not visited[candidate] and dist[curr, candidate] < best_dist:
+            if visited[candidate]:
+                continue
+
+            # O candidato é efetivamente examinado.
+            if stats is not None:
+                stats["nodes_visited"] += 1
+
+            if dist[curr, candidate] < best_dist:
                 best_dist = dist[curr, candidate]
                 best_next = candidate
+
         visited[best_next] = True
         tour.append(best_next)
         curr = best_next
@@ -62,26 +86,36 @@ def _get_or_embed_2d_coords(graph: TSPGraph) -> np.ndarray:
 
 
 # Heurística 3 (Convex Hull): inicializa o ciclo com o fecho convexo e insere vértices internos gulosamente.
-def heuristic_convex_hull(graph: TSPGraph) -> tuple[list[int], int]:
+def heuristic_convex_hull(
+    graph: TSPGraph,
+    stats: dict | None = None
+) -> tuple[list[int], int]:
     n = graph.dimension
     dist = graph.dist_matrix
+
     if n <= 3:
         tour = list(range(n))
+        if stats is not None:
+            stats["nodes_visited"] += n
         return tour, _compute_tour_cost(tour, dist)
 
     coords_2d = _get_or_embed_2d_coords(graph)
+
+    # Consideramos todos os pontos submetidos à construção da hull
+    # como nodos processados.
+    if stats is not None:
+        stats["nodes_visited"] += n
+
     try:
         hull = ConvexHull(coords_2d)
         subtour = [int(v) for v in hull.vertices]
     except QhullError:
-        # Fallback seguro caso os pontos projetados sejam colineares.
         far_node = int(np.argmax(dist[0]))
         subtour = [0, far_node]
 
     in_tour = set(subtour)
     unvisited = [v for v in range(n) if v not in in_tour]
 
-    # Inserção mais barata (Cheapest Insertion): escolhe o par (vértice interno, aresta) de menor acréscimo.
     while unvisited:
         best_node = -1
         best_pos = -1
@@ -89,10 +123,20 @@ def heuristic_convex_hull(graph: TSPGraph) -> tuple[list[int], int]:
         m = len(subtour)
 
         for r in unvisited:
+            # Cada ponto candidato examinado para inserção é contado.
+            if stats is not None:
+                stats["nodes_visited"] += 1
+
             for idx in range(m):
                 i = subtour[idx]
                 j = subtour[(idx + 1) % m]
-                delta = int(dist[i, r]) + int(dist[r, j]) - int(dist[i, j])
+
+                delta = (
+                    int(dist[i, r])
+                    + int(dist[r, j])
+                    - int(dist[i, j])
+                )
+
                 if delta < best_delta:
                     best_delta = delta
                     best_node = r
@@ -105,19 +149,29 @@ def heuristic_convex_hull(graph: TSPGraph) -> tuple[list[int], int]:
 
 
 # Heurística 4 (Twice-Around-the-Tree): usa o custo da aproximação Twice-Around-the-Tree como limite inicial.
-def heuristic_twice_around_the_tree(graph: TSPGraph) -> tuple[list[int], int]:
-    tour, cost, _ = compute_twice_around_tour(graph)
+def heuristic_twice_around_the_tree(
+    graph: TSPGraph,
+    stats: dict | None = None
+) -> tuple[list[int], int]:
+    tour, cost, profiling = compute_twice_around_tour_full(graph)
     return tour, cost
 
-
 # Heurística 5 (Christofides): usa o custo da aproximação de Christofides como limite inicial.
-def heuristic_christofides(graph: TSPGraph) -> tuple[list[int], int]:
-    tour, cost, _ = compute_christofides_tour(graph)
+def heuristic_christofides(
+    graph: TSPGraph,
+    stats: dict | None = None
+) -> tuple[list[int], int]:
+    tour, cost, profiling = compute_christofides_tour(graph)
     return tour, cost
 
 
 # Seleciona e executa a estratégia de warm-start especificada, medindo seu tempo de execução.
-def compute_initial_upper_bound(graph: TSPGraph, strategy: str) -> tuple[list[int], int, float]:
+def compute_initial_upper_bound(
+    graph: TSPGraph,
+    strategy: str,
+    stats: dict | None = None
+) -> tuple[list[int], int, float]:
+
     strategies = {
         "trivial": heuristic_trivial,
         "nearest_neighbor": heuristic_nearest_neighbor,
@@ -125,16 +179,27 @@ def compute_initial_upper_bound(graph: TSPGraph, strategy: str) -> tuple[list[in
         "twice_around_the_tree": heuristic_twice_around_the_tree,
         "christofides": heuristic_christofides,
     }
+
     key = strategy.strip().lower()
+
     if key not in strategies:
         raise ValueError(
             f"Estratégia de warm-start inválida: '{strategy}'. "
             f"Opções válidas: {list(strategies.keys())}"
         )
 
+    if stats is None:
+        stats = {
+            "nodes_visited": 0,
+            "nodes_pruned": 0,
+        }
+
     t0 = time.perf_counter()
-    tour, upper_bound = strategies[key](graph)
+
+    tour, upper_bound = strategies[key](graph, stats=stats)
+
     heuristic_time = time.perf_counter() - t0
+
     return tour, upper_bound, heuristic_time
 
 
@@ -184,27 +249,49 @@ def branch_and_bound(
     time_limit: float = 1800.0,
 ) -> dict:
     tracemalloc.start()
-    tracemalloc.reset_peak()
     overall_start = time.perf_counter()
 
-    # 1. Geração do limite superior inicial (Upper Bound) via heurística escolhida.
-    best_tour, best_cost, heuristic_time = compute_initial_upper_bound(graph, warm_start)
+    # Métricas específicas da heurística de warm-start.
+    heuristic_stats = {
+        "nodes_visited": 0,
+        "nodes_pruned": 0,
+    }
+
+    # A heurística é medida separadamente do restante do Branch and Bound.
+    tracemalloc.reset_peak()
+
+    best_tour, best_cost, heuristic_time = compute_initial_upper_bound(
+        graph,
+        warm_start,
+        stats=heuristic_stats,
+    )
+
+    _, heuristic_peak_mem = tracemalloc.get_traced_memory()
+
+    # Reinicia o pico para medir o Branch and Bound após a heurística.
+    # As alocações que continuam vivas (ex.: tour inicial) permanecem na memória atual.
+    tracemalloc.reset_peak()
 
     n = graph.dimension
     if n <= 3:
         total_time = time.perf_counter() - overall_start
         _, peak_mem = tracemalloc.get_traced_memory()
+        peak_mem = max(peak_mem, heuristic_peak_mem)
         tracemalloc.stop()
         return {
             "warm_start": warm_start,
             "total_time_sec": total_time,
             "heuristic_time_sec": heuristic_time,
+            "heuristic_peak_memory_bytes": int(heuristic_peak_mem),
+            "heuristic_nodes_visited": heuristic_stats["nodes_visited"],
+            "heuristic_nodes_pruned": heuristic_stats["nodes_pruned"],
             "best_cost": best_cost,
             "best_tour": best_tour,
             "is_optimal": True,
             "timed_out": False,
             "nodes_expanded": 0,
             "nodes_pruned": 0,
+            "candidates_evaluated": 0,
             "peak_memory_bytes": int(peak_mem),
         }
 
@@ -217,6 +304,7 @@ def branch_and_bound(
 
     nodes_expanded = 0
     nodes_pruned = 0
+    candidates_evaluated = 0
     timed_out = False
 
     # 2. Inicialização da pilha de Busca em Profundidade (DFS) fixando a origem no vértice 0.
@@ -229,6 +317,7 @@ def branch_and_bound(
         # Como v1 < last_city é exigido ao fechar o ciclo, v1 = n - 1 nunca pode ser o primeiro passo.
         if v1 == n - 1:
             continue
+        candidates_evaluated += 1
         mask = 1 | (1 << v1)
         c1 = dist[0][v1]
         lb = _compute_lower_bound(c1, v1, mask, dist, sorted_nbrs)
@@ -260,6 +349,7 @@ def branch_and_bound(
         if depth == n - 2:
             rem_bit = full_mask ^ visited_mask
             last_city = rem_bit.bit_length() - 1
+            candidates_evaluated += 1  # avalia a última cidade/fechamento do ciclo
             if first_city < last_city:
                 total_tour_cost = path_cost + dist[curr][last_city] + dist[last_city][0]
                 if total_tour_cost < best_cost:
@@ -275,6 +365,7 @@ def branch_and_bound(
         for nxt in sorted_nbrs[curr]:
             if visited_mask & (1 << nxt):
                 continue
+            candidates_evaluated += 1  # cada próxima cidade considerada, mesmo se podada
             new_cost = path_cost + dist[curr][nxt]
             if new_cost >= best_cost:
                 nodes_pruned += 1
@@ -293,6 +384,8 @@ def branch_and_bound(
 
     total_time = time.perf_counter() - overall_start
     _, peak_mem = tracemalloc.get_traced_memory()
+    peak_mem = max(peak_mem, heuristic_peak_mem)
+
     tracemalloc.stop()
 
     # Tratamento explícito do caso especial de estouro do limite de tempo (30 minutos).
@@ -304,10 +397,14 @@ def branch_and_bound(
         "warm_start": warm_start,
         "total_time_sec": total_time,
         "heuristic_time_sec": heuristic_time,
+        "heuristic_peak_memory_bytes": int(heuristic_peak_mem),
+        "heuristic_nodes_visited": heuristic_stats["nodes_visited"],
+        "heuristic_nodes_pruned": heuristic_stats["nodes_pruned"],
         "best_cost": int(best_cost),
         "is_optimal": not timed_out,
         "timed_out": timed_out,
         "nodes_expanded": nodes_expanded,
         "nodes_pruned": nodes_pruned,
+        "candidates_evaluated": candidates_evaluated,
         "peak_memory_bytes": int(peak_mem),
     }
