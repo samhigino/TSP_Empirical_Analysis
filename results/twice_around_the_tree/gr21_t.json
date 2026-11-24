@@ -1,0 +1,21 @@
+{
+    "instance_name": "gr21",
+    "dimension": 21,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2707,
+    "twice-around-the-tree": {
+        "total_time_sec": 0.0012636093702167272,
+        "approx_factor": 1.3771702992242334,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.0011191558692371473,
+                "peak_memory_bytes": 22296
+            },
+            "preorder_shortcutting": {
+                "time_sec": 0.00011651488050119952,
+                "peak_memory_bytes": 4808
+            },
+            "total_peak_memory_bytes": 22296
+        }
+    }
+}

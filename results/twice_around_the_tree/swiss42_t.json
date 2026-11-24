@@ -1,0 +1,21 @@
+{
+    "instance_name": "swiss42",
+    "dimension": 42,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1273,
+    "twice-around-the-tree": {
+        "total_time_sec": 0.0031181088100129275,
+        "approx_factor": 1.2890809112333073,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.002917300460248953,
+                "peak_memory_bytes": 48784
+            },
+            "preorder_shortcutting": {
+                "time_sec": 0.00016123814100865274,
+                "peak_memory_bytes": 5232
+            },
+            "total_peak_memory_bytes": 48784
+        }
+    }
+}

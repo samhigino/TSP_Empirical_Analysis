@@ -1,0 +1,25 @@
+{
+    "instance_name": "burma14",
+    "dimension": 14,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 3323,
+    "christofides": {
+        "total_time_sec": 0.008921643319918076,
+        "approx_factor": 1.0376166114956364,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.0009416680899448693,
+                "peak_memory_bytes": 3606
+            },
+            "minimum_weight_perfect_matching": {
+                "time_sec": 0.007618026149866636,
+                "peak_memory_bytes": 13080
+            },
+            "eulerian_circuit_and_shortcutting": {
+                "time_sec": 0.0003190549902501516,
+                "peak_memory_bytes": 1934
+            },
+            "total_peak_memory_bytes": 13080
+        }
+    }
+}

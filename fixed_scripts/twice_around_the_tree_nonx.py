@@ -98,10 +98,11 @@ def _preorder_tour_and_cost(mst: list[list[int]], dist_matrix: np.ndarray, start
     return tour, total_cost
 
 
-# Executa o núcleo do Twice-Around-the-Tree retornando o tour, seu custo e o profiling das subrotinas.
-def compute_twice_around_tour(graph: TSPGraph) -> tuple[int, dict]:
+def compute_twice_around_tour_full(graph: TSPGraph) -> tuple[list[int], int, dict]:
     mst, mst_prof = profile_subroutine(compute_mst, graph.dist_matrix)
-    (tour, tour_cost), dfs_prof = profile_subroutine(_preorder_tour_and_cost, mst, graph.dist_matrix, 0)
+    (tour, tour_cost), dfs_prof = profile_subroutine(
+        _preorder_tour_and_cost, mst, graph.dist_matrix, 0
+    )
 
     profiling = {
         "mst_construction": mst_prof,
@@ -110,6 +111,12 @@ def compute_twice_around_tour(graph: TSPGraph) -> tuple[int, dict]:
             mst_prof["peak_memory_bytes"], dfs_prof["peak_memory_bytes"]
         ),
     }
+
+    return tour, tour_cost, profiling
+
+
+def compute_twice_around_tour(graph: TSPGraph) -> tuple[int, dict]:
+    _, tour_cost, profiling = compute_twice_around_tour_full(graph)
     return tour_cost, profiling
 
 

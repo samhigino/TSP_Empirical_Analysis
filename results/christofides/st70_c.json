@@ -1,0 +1,25 @@
+{
+    "instance_name": "st70",
+    "dimension": 70,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 675,
+    "christofides": {
+        "total_time_sec": 0.06367218101164326,
+        "approx_factor": 1.1096296296296295,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.01035157788952347,
+                "peak_memory_bytes": 8622
+            },
+            "minimum_weight_perfect_matching": {
+                "time_sec": 0.05158171642993693,
+                "peak_memory_bytes": 190106
+            },
+            "eulerian_circuit_and_shortcutting": {
+                "time_sec": 0.0016677563192206435,
+                "peak_memory_bytes": 5772
+            },
+            "total_peak_memory_bytes": 190106
+        }
+    }
+}

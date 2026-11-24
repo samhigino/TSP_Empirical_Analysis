@@ -1,0 +1,21 @@
+{
+    "instance_name": "berlin52",
+    "dimension": 52,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 7542,
+    "twice-around-the-tree": {
+        "total_time_sec": 0.007270741970132804,
+        "approx_factor": 1.3410236011667993,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.007025495979178231,
+                "peak_memory_bytes": 100784
+            },
+            "preorder_shortcutting": {
+                "time_sec": 0.00019606984962592834,
+                "peak_memory_bytes": 5336
+            },
+            "total_peak_memory_bytes": 100784
+        }
+    }
+}

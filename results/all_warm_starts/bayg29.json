@@ -1,0 +1,83 @@
+{
+  "instance_name": "bayg29",
+  "dimension": 29,
+  "edge_weight_type": "EXPLICIT",
+  "optimal_cost": 1610,
+  "branch_and_bound": {
+    "trivial": {
+      "warm_start": "trivial",
+      "total_time_sec": 1800.0275389649978,
+      "heuristic_time_sec": 5.767000402556732e-05,
+      "heuristic_peak_memory_bytes": 944,
+      "heuristic_nodes_visited": 29,
+      "heuristic_nodes_pruned": 0,
+      "best_cost": 4625,
+      "is_optimal": false,
+      "timed_out": true,
+      "nodes_expanded": 17777663,
+      "nodes_pruned": 10346174,
+      "candidates_evaluated": 28124184,
+      "peak_memory_bytes": 57076
+    },
+    "nearest_neighbor": {
+      "warm_start": "nearest_neighbor",
+      "total_time_sec": 1800.062175840998,
+      "heuristic_time_sec": 0.0009857760014710948,
+      "heuristic_peak_memory_bytes": 1241,
+      "heuristic_nodes_visited": 407,
+      "heuristic_nodes_pruned": 0,
+      "best_cost": 2005,
+      "is_optimal": false,
+      "timed_out": true,
+      "nodes_expanded": 6861823,
+      "nodes_pruned": 15797630,
+      "candidates_evaluated": 22659809,
+      "peak_memory_bytes": 45948
+    },
+    "convex_hull": {
+      "warm_start": "convex_hull",
+      "total_time_sec": 1800.2855854500012,
+      "heuristic_time_sec": 0.014500171004328877,
+      "heuristic_peak_memory_bytes": 4272,
+      "heuristic_nodes_visited": 282,
+      "heuristic_nodes_pruned": 0,
+      "best_cost": 1650,
+      "is_optimal": false,
+      "timed_out": true,
+      "nodes_expanded": 1722367,
+      "nodes_pruned": 20086714,
+      "candidates_evaluated": 21809187,
+      "peak_memory_bytes": 39740
+    },
+    "twice_around_the_tree": {
+      "warm_start": "twice_around_the_tree",
+      "total_time_sec": 1800.0491712950025,
+      "heuristic_time_sec": 0.0006259910005610436,
+      "heuristic_peak_memory_bytes": 2374,
+      "heuristic_nodes_visited": 0,
+      "heuristic_nodes_pruned": 0,
+      "best_cost": 2210,
+      "is_optimal": false,
+      "timed_out": true,
+      "nodes_expanded": 9107455,
+      "nodes_pruned": 13972940,
+      "candidates_evaluated": 23080747,
+      "peak_memory_bytes": 45916
+    },
+    "christofides": {
+      "warm_start": "christofides",
+      "total_time_sec": 1800.098993574,
+      "heuristic_time_sec": 0.01593827799661085,
+      "heuristic_peak_memory_bytes": 9548,
+      "heuristic_nodes_visited": 0,
+      "heuristic_nodes_pruned": 0,
+      "best_cost": 1737,
+      "is_optimal": false,
+      "timed_out": true,
+      "nodes_expanded": 2958335,
+      "nodes_pruned": 21169838,
+      "candidates_evaluated": 24128442,
+      "peak_memory_bytes": 49691
+    }
+  }
+}
