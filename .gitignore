@@ -1,1 +1,5 @@
 TSPlib_docs.pdf
+venv
+notes.txt
+.gitignore
+tests
