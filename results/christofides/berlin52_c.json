@@ -1,0 +1,25 @@
+{
+    "instance_name": "berlin52",
+    "dimension": 52,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 7542,
+    "christofides": {
+        "total_time_sec": 0.030072582719440105,
+        "approx_factor": 1.0910898965791567,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.00674777265987359,
+                "peak_memory_bytes": 6972
+            },
+            "minimum_weight_perfect_matching": {
+                "time_sec": 0.02203305922987056,
+                "peak_memory_bytes": 77228
+            },
+            "eulerian_circuit_and_shortcutting": {
+                "time_sec": 0.0012240450098761357,
+                "peak_memory_bytes": 4434
+            },
+            "total_peak_memory_bytes": 77228
+        }
+    }
+}

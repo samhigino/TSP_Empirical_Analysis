@@ -1,0 +1,275 @@
+[
+  {
+    "instance_name": "burma14",
+    "dimension": 14,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 3323,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0003427389985881746,
+      "approx_factor": 1.14775804995486,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0002826119982637465,
+          "peak_memory_bytes": 1296
+        },
+        "preorder_shortcutting": {
+          "time_sec": 4.592099809087813e-05,
+          "peak_memory_bytes": 872
+        },
+        "total_peak_memory_bytes": 1296
+      }
+    }
+  },
+  {
+    "instance_name": "ulysses16.tsp",
+    "dimension": 16,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 6859,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.00035265000187791886,
+      "approx_factor": 1.1522087767896194,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.00028939200099557637,
+          "peak_memory_bytes": 1504
+        },
+        "preorder_shortcutting": {
+          "time_sec": 5.3598002996295694e-05,
+          "peak_memory_bytes": 888
+        },
+        "total_peak_memory_bytes": 1504
+      }
+    }
+  },
+  {
+    "instance_name": "gr17",
+    "dimension": 17,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2085,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0004275209933985025,
+      "approx_factor": 1.1280575539568345,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0003555819985922426,
+          "peak_memory_bytes": 1400
+        },
+        "preorder_shortcutting": {
+          "time_sec": 5.831100512295961e-05,
+          "peak_memory_bytes": 960
+        },
+        "total_peak_memory_bytes": 1400
+      }
+    }
+  },
+  {
+    "instance_name": "gr21",
+    "dimension": 21,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2707,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.00046254999935626986,
+      "approx_factor": 1.3771702992242334,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0003999450011178851,
+          "peak_memory_bytes": 1656
+        },
+        "preorder_shortcutting": {
+          "time_sec": 5.224400898441672e-05,
+          "peak_memory_bytes": 992
+        },
+        "total_peak_memory_bytes": 1656
+      }
+    }
+  },
+  {
+    "instance_name": "ulysses22.tsp",
+    "dimension": 22,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 7013,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0005273210012819618,
+      "approx_factor": 1.197918152003422,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.00046074900310486553,
+          "peak_memory_bytes": 1808
+        },
+        "preorder_shortcutting": {
+          "time_sec": 5.653999513015151e-05,
+          "peak_memory_bytes": 1000
+        },
+        "total_peak_memory_bytes": 1808
+      }
+    }
+  },
+  {
+    "instance_name": "gr24",
+    "dimension": 24,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1272,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.00043575000367127357,
+      "approx_factor": 1.2633647798742138,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0003718870028387755,
+          "peak_memory_bytes": 1760
+        },
+        "preorder_shortcutting": {
+          "time_sec": 5.430500488728285e-05,
+          "peak_memory_bytes": 1016
+        },
+        "total_peak_memory_bytes": 1760
+      }
+    }
+  },
+  {
+    "instance_name": "bayg29",
+    "dimension": 29,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1610,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0006223149970173836,
+      "approx_factor": 1.3726708074534162,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.000546662004198879,
+          "peak_memory_bytes": 2104
+        },
+        "preorder_shortcutting": {
+          "time_sec": 6.448400090448558e-05,
+          "peak_memory_bytes": 1088
+        },
+        "total_peak_memory_bytes": 2104
+      }
+    }
+  },
+  {
+    "instance_name": "bays29",
+    "dimension": 29,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2020,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0006538730079773814,
+      "approx_factor": 1.1732673267326732,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0005787270050495863,
+          "peak_memory_bytes": 2104
+        },
+        "preorder_shortcutting": {
+          "time_sec": 6.44120026845485e-05,
+          "peak_memory_bytes": 1088
+        },
+        "total_peak_memory_bytes": 2104
+      }
+    }
+  },
+  {
+    "instance_name": "dantzig42",
+    "dimension": 42,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 699,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0010860489984042942,
+      "approx_factor": 1.2789699570815452,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0009814949962310493,
+          "peak_memory_bytes": 2992
+        },
+        "preorder_shortcutting": {
+          "time_sec": 9.112799190916121e-05,
+          "peak_memory_bytes": 1352
+        },
+        "total_peak_memory_bytes": 2992
+      }
+    }
+  },
+  {
+    "instance_name": "swiss42",
+    "dimension": 42,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1273,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0010340890020597727,
+      "approx_factor": 1.2890809112333073,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0009319110098294914,
+          "peak_memory_bytes": 2992
+        },
+        "preorder_shortcutting": {
+          "time_sec": 8.968200301751495e-05,
+          "peak_memory_bytes": 1352
+        },
+        "total_peak_memory_bytes": 2992
+      }
+    }
+  },
+  {
+    "instance_name": "berlin52",
+    "dimension": 52,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 7542,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0025802150019444527,
+      "approx_factor": 1.3410236011667993,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.002424431999679655,
+          "peak_memory_bytes": 3712
+        },
+        "preorder_shortcutting": {
+          "time_sec": 0.0001360750012099743,
+          "peak_memory_bytes": 1464
+        },
+        "total_peak_memory_bytes": 3712
+      }
+    }
+  },
+  {
+    "instance_name": "brazil58",
+    "dimension": 58,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 25395,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0031016579864080996,
+      "approx_factor": 1.1530616263043907,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0029461929958779364,
+          "peak_memory_bytes": 4816
+        },
+        "preorder_shortcutting": {
+          "time_sec": 0.0001371590106282383,
+          "peak_memory_bytes": 1608
+        },
+        "total_peak_memory_bytes": 4816
+      }
+    }
+  },
+  {
+    "instance_name": "st70",
+    "dimension": 70,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 675,
+    "twice-around-the-tree": {
+      "total_time_sec": 0.0026599779969546946,
+      "approx_factor": 1.3155555555555556,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0024943859956692905,
+          "peak_memory_bytes": 4752
+        },
+        "preorder_shortcutting": {
+          "time_sec": 0.00014677399420179427,
+          "peak_memory_bytes": 1768
+        },
+        "total_peak_memory_bytes": 4752
+      }
+    }
+  }
+]

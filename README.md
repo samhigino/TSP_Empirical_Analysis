@@ -2,7 +2,6 @@
 ---
 ## 📋 Descrição do Problema
 O objetivo deste projeto é executar três algoritmos diferentes para o TSP, e coletar dados das execuções para fazer uma análise empírica de complexidade. Para mais detalhes, leia o relatório em ```docs/relatorio.pdf```.
-
 ---
 
 ## 📂 Estrutura do projeto
@@ -16,6 +15,8 @@ O objetivo deste projeto é executar três algoritmos diferentes para o TSP, e c
 │ │  └─ ...
 │ └─ relatorio.pdf      # Relatório em pdf
 ├─ raw_ai_scripts/  # Scripts sem modificação (não utilizados)
+│ └─ ...
+├─ results/         # Diretório para onde vão os resultados de execução (contém resultados anteriores)
 │ └─ ...
 └─ scripts/         # Scripts refatoratos (efetivos)
   └─ ...

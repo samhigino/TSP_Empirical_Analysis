@@ -1,0 +1,25 @@
+{
+    "instance_name": "bays29",
+    "dimension": 29,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2020,
+    "christofides": {
+        "total_time_sec": 0.014613471839984413,
+        "approx_factor": 1.10990099009901,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.0021487461404467467,
+                "peak_memory_bytes": 4949
+            },
+            "minimum_weight_perfect_matching": {
+                "time_sec": 0.01180791156948544,
+                "peak_memory_bytes": 41465
+            },
+            "eulerian_circuit_and_shortcutting": {
+                "time_sec": 0.0006121840998821426,
+                "peak_memory_bytes": 2921
+            },
+            "total_peak_memory_bytes": 41465
+        }
+    }
+}

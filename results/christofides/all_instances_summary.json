@@ -1,0 +1,327 @@
+[
+  {
+    "instance_name": "burma14",
+    "dimension": 14,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 3323,
+    "christofides": {
+      "total_time_sec": 0.008921643319918076,
+      "approx_factor": 1.0376166114956364,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0009416680899448693,
+          "peak_memory_bytes": 3606
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.007618026149866636,
+          "peak_memory_bytes": 13080
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0003190549902501516,
+          "peak_memory_bytes": 1934
+        },
+        "total_peak_memory_bytes": 13080
+      }
+    }
+  },
+  {
+    "instance_name": "ulysses16.tsp",
+    "dimension": 16,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 6859,
+    "christofides": {
+      "total_time_sec": 0.005778233469463885,
+      "approx_factor": 1.018370024784954,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.001016556720569497,
+          "peak_memory_bytes": 3768
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.004399132520047715,
+          "peak_memory_bytes": 13078
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.00033073355036322027,
+          "peak_memory_bytes": 2018
+        },
+        "total_peak_memory_bytes": 13078
+      }
+    }
+  },
+  {
+    "instance_name": "gr17",
+    "dimension": 17,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2085,
+    "christofides": {
+      "total_time_sec": 0.014275556579959811,
+      "approx_factor": 1.0503597122302157,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.001132883839745773,
+          "peak_memory_bytes": 3849
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.012718557240150403,
+          "peak_memory_bytes": 14462
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.00038146197897731326,
+          "peak_memory_bytes": 2189
+        },
+        "total_peak_memory_bytes": 14462
+      }
+    }
+  },
+  {
+    "instance_name": "gr21",
+    "dimension": 21,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2707,
+    "christofides": {
+      "total_time_sec": 0.009972176889277762,
+      "approx_factor": 1.027705947543406,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0014708494498336222,
+          "peak_memory_bytes": 4237
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.007997107769915602,
+          "peak_memory_bytes": 18265
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.00046388552014832386,
+          "peak_memory_bytes": 2422
+        },
+        "total_peak_memory_bytes": 18265
+      }
+    }
+  },
+  {
+    "instance_name": "ulysses22.tsp",
+    "dimension": 22,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 7013,
+    "christofides": {
+      "total_time_sec": 0.010277697370038369,
+      "approx_factor": 1.0620276629117353,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.001540737428877037,
+          "peak_memory_bytes": 4318
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.008210055120871402,
+          "peak_memory_bytes": 18231
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.00048455181007739156,
+          "peak_memory_bytes": 2464
+        },
+        "total_peak_memory_bytes": 18231
+      }
+    }
+  },
+  {
+    "instance_name": "gr24",
+    "dimension": 24,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1272,
+    "christofides": {
+      "total_time_sec": 0.0103155260294443,
+      "approx_factor": 1.1061320754716981,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0016906622792885173,
+          "peak_memory_bytes": 4480
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.0080818899103906,
+          "peak_memory_bytes": 24795
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0005044686599285342,
+          "peak_memory_bytes": 2517
+        },
+        "total_peak_memory_bytes": 24795
+      }
+    }
+  },
+  {
+    "instance_name": "bayg29",
+    "dimension": 29,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1610,
+    "christofides": {
+      "total_time_sec": 0.011841941359161865,
+      "approx_factor": 1.0788819875776396,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.002191744539886713,
+          "peak_memory_bytes": 4949
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.008986669039732078,
+          "peak_memory_bytes": 32416
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0006192819096031599,
+          "peak_memory_bytes": 2920
+        },
+        "total_peak_memory_bytes": 32416
+      }
+    }
+  },
+  {
+    "instance_name": "bays29",
+    "dimension": 29,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 2020,
+    "christofides": {
+      "total_time_sec": 0.014613471839984413,
+      "approx_factor": 1.10990099009901,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.0021487461404467467,
+          "peak_memory_bytes": 4949
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.01180791156948544,
+          "peak_memory_bytes": 41465
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0006121840998821426,
+          "peak_memory_bytes": 2921
+        },
+        "total_peak_memory_bytes": 41465
+      }
+    }
+  },
+  {
+    "instance_name": "dantzig42",
+    "dimension": 42,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 699,
+    "christofides": {
+      "total_time_sec": 0.02524973719060654,
+      "approx_factor": 1.190271816881259,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.003824016900616698,
+          "peak_memory_bytes": 6066
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.02045327305982937,
+          "peak_memory_bytes": 91661
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0009195294501841999,
+          "peak_memory_bytes": 3983
+        },
+        "total_peak_memory_bytes": 91661
+      }
+    }
+  },
+  {
+    "instance_name": "swiss42",
+    "dimension": 42,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 1273,
+    "christofides": {
+      "total_time_sec": 0.020823465809808112,
+      "approx_factor": 1.0746268656716418,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.003998642600927269,
+          "peak_memory_bytes": 6066
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.015849622759997146,
+          "peak_memory_bytes": 63095
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0009150503699493129,
+          "peak_memory_bytes": 3885
+        },
+        "total_peak_memory_bytes": 63095
+      }
+    }
+  },
+  {
+    "instance_name": "berlin52",
+    "dimension": 52,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 7542,
+    "christofides": {
+      "total_time_sec": 0.030072582719440105,
+      "approx_factor": 1.0910898965791567,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.00674777265987359,
+          "peak_memory_bytes": 6972
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.02203305922987056,
+          "peak_memory_bytes": 77228
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0012240450098761357,
+          "peak_memory_bytes": 4434
+        },
+        "total_peak_memory_bytes": 77228
+      }
+    }
+  },
+  {
+    "instance_name": "brazil58",
+    "dimension": 58,
+    "edge_weight_type": "EXPLICIT",
+    "optimal_cost": 25395,
+    "christofides": {
+      "total_time_sec": 0.0420833015498647,
+      "approx_factor": 1.05760976570191,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.008070129349653144,
+          "peak_memory_bytes": 7554
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.032678981619537806,
+          "peak_memory_bytes": 107790
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0012700680698617363,
+          "peak_memory_bytes": 4976
+        },
+        "total_peak_memory_bytes": 107790
+      }
+    }
+  },
+  {
+    "instance_name": "st70",
+    "dimension": 70,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 675,
+    "christofides": {
+      "total_time_sec": 0.06367218101164326,
+      "approx_factor": 1.1096296296296295,
+      "subroutine_profiling": {
+        "mst_construction": {
+          "time_sec": 0.01035157788952347,
+          "peak_memory_bytes": 8622
+        },
+        "minimum_weight_perfect_matching": {
+          "time_sec": 0.05158171642993693,
+          "peak_memory_bytes": 190106
+        },
+        "eulerian_circuit_and_shortcutting": {
+          "time_sec": 0.0016677563192206435,
+          "peak_memory_bytes": 5772
+        },
+        "total_peak_memory_bytes": 190106
+      }
+    }
+  }
+]

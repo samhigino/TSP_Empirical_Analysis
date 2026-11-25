@@ -1,0 +1,21 @@
+{
+    "instance_name": "ulysses22.tsp",
+    "dimension": 22,
+    "edge_weight_type": "GEO",
+    "optimal_cost": 7013,
+    "twice-around-the-tree": {
+        "total_time_sec": 0.001283030129125109,
+        "approx_factor": 1.197918152003422,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.00115334789006738,
+                "peak_memory_bytes": 24736
+            },
+            "preorder_shortcutting": {
+                "time_sec": 0.00010410482020233757,
+                "peak_memory_bytes": 4736
+            },
+            "total_peak_memory_bytes": 24736
+        }
+    }
+}

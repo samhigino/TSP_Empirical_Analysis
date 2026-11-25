@@ -1,6 +1,6 @@
+.gitignore
 TSPlib_docs.pdf
 venv
-notes.txt
-.gitignore
+
 docs/tests
-docs/prev_results
+docs/notes.txt

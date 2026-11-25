@@ -1,0 +1,21 @@
+{
+    "instance_name": "st70",
+    "dimension": 70,
+    "edge_weight_type": "EUC_2D",
+    "optimal_cost": 675,
+    "twice-around-the-tree": {
+        "total_time_sec": 0.008427931679907488,
+        "approx_factor": 1.3022222222222222,
+        "subroutine_profiling": {
+            "mst_construction": {
+                "time_sec": 0.008170816939964425,
+                "peak_memory_bytes": 137880
+            },
+            "preorder_shortcutting": {
+                "time_sec": 0.00019502889976138248,
+                "peak_memory_bytes": 5960
+            },
+            "total_peak_memory_bytes": 137880
+        }
+    }
+}
