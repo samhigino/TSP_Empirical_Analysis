@@ -40,6 +40,7 @@ Caso este processo não funcione, tente rodar os comandos explicitamente:
 1. Crie o ambiente virtual abrindo o prompt de comando no diretório principal do projeto e digitando ```python -m venv venv``` ou ```python3 -m venv venv```;
 
 2. Ative o ambiente virtual, usando o comando relativo ao seu sistema:
+
         - **Windows (PowerShell):** ```.\venv\Scripts\activate```;
         - **Windows (CMD):** ```.\venv\Scripts\activate.bat```;
         - **Linux/macOS:** ```source venv/bin/activate```;
