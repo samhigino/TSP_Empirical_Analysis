@@ -1,5 +1,4 @@
 .gitignore
-TSPlib_docs.pdf
 venv
 
 docs/tests

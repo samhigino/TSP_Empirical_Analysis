@@ -1,7 +1,9 @@
 # Análise Empírica do Problema do Caixeiro Viajante
 ---
 ## 📋 Descrição do Problema
+
 O objetivo deste projeto é executar três algoritmos diferentes para o TSP, e coletar dados das execuções para fazer uma análise empírica de complexidade. Para mais detalhes, leia o relatório em ```docs/relatorio.pdf```.
+
 ---
 
 ## 📂 Estrutura do projeto
