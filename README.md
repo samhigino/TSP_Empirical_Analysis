@@ -34,3 +34,17 @@ Para configurar os parâmetros da execução, vá em ```scripts/main.py``` e con
 1. Abra o terminal na pasta do projeto;
 
 2. Rode o comando: ```./run.sh```
+
+Caso este processo não funcione, tente rodar os comandos explicitamente:
+
+1. Crie o ambiente virtual abrindo o prompt de comando no diretório principal do projeto e digitando ```python -m venv venv``` ou ```python3 -m venv venv```;
+
+2. Ative o ambiente virtual, usando o comando relativo ao seu sistema:
+        - **Windows (PowerShell):** ```.\venv\Scripts\activate```;
+        - **Windows (CMD):** ```.\venv\Scripts\activate.bat```;
+        - **Linux/macOS:** ```source venv/bin/activate```;
+        - Caso nenhuma destes comandos funcione, procure saber como ativar o venv na sua máquina.
+
+3. Instale as dependências abrindo o prompt de comando no diretório principal do projeto e digitando ```pip install -r requirements.txt```;
+
+4. Execute o programa principal usando o comando ```scripts/main.py```.
