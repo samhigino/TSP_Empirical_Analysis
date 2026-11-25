@@ -2,4 +2,5 @@ TSPlib_docs.pdf
 venv
 notes.txt
 .gitignore
-tests
+docs/tests
+docs/prev_results
